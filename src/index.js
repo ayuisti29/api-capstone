@@ -15,6 +15,10 @@ app.use(express.json());
 app.use("/users", usersRoutes);
 app.use("/logins", loginsRoutes);
 
+app.get("/beranda", (req, res) => {
+  res.send("Selamat Datang di Aplikasi Animal_Recognition");
+});
+
 app.listen(PORT, () => {
   console.log(`Server berhasil di running di port ${PORT}`);
 });
