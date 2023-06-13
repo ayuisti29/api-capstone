@@ -8,12 +8,12 @@ const router = express.Router();
 router.post("/", UserController.createNewUser);
 
 //CREATE GET
-router.get("/", UserController.getAllUsers);
+//router.get("/", UserController.getAllUsers);
 
 //UPDATE PATCH
-router.patch("/:idUser", UserController.updateUser);
+//router.patch("/:idUser", UserController.updateUser);
 
 //DELETE DELETE
-router.delete("/:idUser", UserController.deleteUser);
+//router.delete("/:idUser", UserController.deleteUser);
 
 module.exports = router;

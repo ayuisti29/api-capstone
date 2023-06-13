@@ -1,10 +1,10 @@
 const dbpool = require("../config/db_animal");
 
-const getAllUsers = () => {
-  const SQLQuery = "SELECT * FROM users";
+// const getAllUsers = () => {
+//   const SQLQuery = "SELECT * FROM users";
 
-  return dbpool.execute(SQLQuery);
-};
+//   return dbpool.execute(SQLQuery);
+// };
 
 const createNewUser = (body) => {
   const SQLQuery = `  INSERT INTO users (userName, email, password) 
@@ -13,23 +13,23 @@ const createNewUser = (body) => {
   return dbpool.execute(SQLQuery);
 };
 
-const updateUser = (body, idUser) => {
-  const SQLQuery = `  UPDATE users 
-                        SET userName='${body.userName}', email='${body.email}', password='${body.password}' 
-                        WHERE idUser=${idUser}`;
+// const updateUser = (body, idUser) => {
+//   const SQLQuery = `  UPDATE users
+//                         SET userName='${body.userName}', email='${body.email}', password='${body.password}'
+//                         WHERE idUser=${idUser}`;
 
-  return dbpool.execute(SQLQuery);
-};
+//   return dbpool.execute(SQLQuery);
+// };
 
-const deleteUser = (idUser) => {
-  const SQLQuery = `DELETE FROM users WHERE idUser=${idUser}`;
+// const deleteUser = (idUser) => {
+//   const SQLQuery = `DELETE FROM users WHERE idUser=${idUser}`;
 
-  return dbpool.execute(SQLQuery);
-};
+//   return dbpool.execute(SQLQuery);
+// };
 
 module.exports = {
-  getAllUsers,
+  //getAllUsers,
   createNewUser,
-  updateUser,
-  deleteUser,
+  //updateUser,
+  //deleteUser,
 };
