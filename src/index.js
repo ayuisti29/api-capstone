@@ -5,6 +5,7 @@ const express = require("express");
 const usersRoutes = require("./routes/users.js");
 const loginsRoutes = require("./routes/logins.js");
 const outputsRoutes = require("./routes/outputs.js");
+const historysRoutes = require("./routes/historys.js");
 
 const middlewareLogRequest = require("./middleware/logs.js");
 const upload = require("./middleware/multer");
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use("/users", usersRoutes);
 app.use("/logins", loginsRoutes);
 app.use("/outputs", outputsRoutes);
+app.use("/historys", historysRoutes);
 app.post("/upload", upload.single("image"), (req, res) => {
   res.json({
     message: "upload berhasil",

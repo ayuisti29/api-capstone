@@ -21,12 +21,10 @@ const createNewUser = (body) => {
 //   return dbpool.execute(SQLQuery);
 // };
 
-// const deleteUser = (idUser) => {
-//   const SQLQuery = `DELETE FROM users WHERE idUser=${idUser}`;
-
 //   return dbpool.execute(SQLQuery);
 // };
-
+// const deleteUser = (idUser) => {
+//   const SQLQuery = `DELETE FROM users WHERE idUser=${idUser}`;
 module.exports = {
   //getAllUsers,
   createNewUser,
