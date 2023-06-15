@@ -1,11 +1,11 @@
-const LoginsModel = require("../models/logins");
+const LoginsModel = require("../models/logins"); //melakukan pemanggilan file logins pada folder models
 
 const createNewLogin = async (req, res) => {
   const { body } = req;
 
   if (!body.email || !body.password) {
     return res.status(400).json({
-      message: "Anda mengirimkan data yang salah",
+      message: "Data yang anda kirimkan salah",
       data: null,
     });
   }
@@ -13,7 +13,7 @@ const createNewLogin = async (req, res) => {
   try {
     await LoginsModel.createNewLogin(body);
     res.status(201).json({
-      message: "CREATE new user success",
+      message: "Upaya masuk anda telah berhasil",
       data: body,
     });
   } catch (error) {
