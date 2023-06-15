@@ -15,10 +15,12 @@ const app = express();
 app.use(middlewareLogRequest);
 app.use(express.json());
 
+//Link
 app.use("/users", usersRoutes);
 app.use("/logins", loginsRoutes);
 app.use("/outputs", outputsRoutes);
 app.use("/historys", historysRoutes);
+//Upload Image Local
 app.post("/upload", upload.single("image"), (req, res) => {
   res.json({
     message: "upload berhasil",
@@ -31,10 +33,12 @@ app.use((err, req, res, next) => {
   });
 });
 
+//Beranda
 app.get("/beranda", (req, res) => {
   res.send("Selamat Datang di Aplikasi Animal_Recognition");
 });
 
+//PORT
 app.listen(PORT, () => {
   console.log(`Server berhasil di running di port ${PORT}`);
 });
