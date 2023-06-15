@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require("express"); //melakukan impor exxpress
 
 const UserController = require("../controller/users.js");
 
